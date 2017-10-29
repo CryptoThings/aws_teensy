@@ -1,9 +1,19 @@
 # aws_teensy
-Example app that uses WolfSSL (optionally with an ECC508a) to talk to AWS IoT
+Example app that uses WolfSSL (optionally with an ECC508a) to talk to AWS IoT<br><br>
 
+Hardware Setup<br>
+I use a Teensy 3.6, but this should run just fine in a Teensy 3.2.<br>
+The ECC508a is connected to the default i2c port, with pull-up resistors.<br>
+An Adafruit Winc1500 breakout is used for the Wifi connection. Look at the config in the file to see how to wire it up.<br>
+Any other network interface that implements the standard Arduino Client interface should work.<br>
+<br>
+I've tried this on a SamD21 chip (Arduino Zero or Adafruit Feather M0) and it works if you disable certificate validation.<br>
+These chips run out of memory when trying to handle the 4kb public keys from AWS.<br>
+<br>
+<br>
 
-
-
+To run the example:<br>
+<br>
 Install new chip, etc.
 
 1:
